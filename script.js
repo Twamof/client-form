@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // الرابط الفعلي لـ Google Apps Script الذي قمنا بإنشائه
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzzCiHskvbRhT4VNH68D3TYaKyiB2uJKcAlsGCvhH-L0gzxF1EaZDcPIzyFOM6cb9QC/exec';
     
-    const form = document.getElementById('clientForm');
+    const form = document.getElementById('internForm') || document.getElementById('clientForm');
     const loadingState = document.getElementById('loadingState');
     const successState = document.getElementById('successState');
     const submitBtn = document.getElementById('submitBtn');
