@@ -26,8 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // الإرسال الفعلي لـ Google Apps Script
-        fetch(scriptURL, { method: 'POST', body: formData })
+        // الإرسال الفعلي لـ Google Apps Script مع تحويل البيانات لـ URLSearchParams
+        fetch(scriptURL, { 
+            method: 'POST', 
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(formData) 
+        })
             .then(response => {
                 showSuccess();
             })
