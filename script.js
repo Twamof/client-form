@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const successState = document.getElementById('successState');
     const submitBtn = document.getElementById('submitBtn');
 
+    if (!form) return;
+
     form.addEventListener('submit', e => {
         e.preventDefault();
         
@@ -17,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // جمع بيانات النموذج
         const formData = new FormData(form);
 
-        // محاكاة الإرسال (أزل هذه المحاكاة واستخدم الكود الفعلي عندما تضع الرابط الحقيقي)
-        if (scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+        // محاكاة الإرسال إذا لم يتم تحديد الرابط
+        if (scriptURL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE' || !scriptURL) {
             console.log("رابط سكربت جوجل غير موجود. هذه محاكاة للإرسال...");
             setTimeout(() => {
                 showSuccess();
