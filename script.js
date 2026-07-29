@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // الرابط الفعلي لـ Google Apps Script
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzzCiHskvbRhT4VNH68D3TYaKyiB2uJKcAlsGCvhH-L0gzxF1EaZDcPIzyFOM6cb9QC/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxUCk5m-oBCtupiRU8j5dwpSEhhGrXpbc0e9ult2PofBPFy6b7aGPgWh3ayAajIzxyi/exec';
 
     const form = document.getElementById('internForm') || document.getElementById('clientForm');
     const loadingState = document.getElementById('loadingState');
